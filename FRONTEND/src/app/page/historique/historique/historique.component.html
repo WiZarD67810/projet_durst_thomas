@@ -1,0 +1,7 @@
+<div class="container mt-5 mb-5">
+    <h2 class="mt-2 mb-3 mx-auto w-title-connexion jks-title-section">Historique</h2>
+
+    <div>
+        <app-historique-line *ngFor="let cmd of commandes" [commande]="cmd"></app-historique-line>
+    </div>
+</div>

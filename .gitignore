@@ -1,0 +1,6 @@
+**/.env
+/Build
+Build.sh
+Heroku.sh
+Git.sh
+.vscode

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="w-100 mx-auto mt-4 mb-5">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-search me-1"></i> Recherche</span>
+            <input type="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="Search">
+        </div>
+        <h5>Type de produit :</h5>
+        <div class="tp03-filter-radio my-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Tous" [(ngModel)]="Type" value="" checked>
+                <label class="form-check-label" for="Tous">Tous</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Processeur" [(ngModel)]="Type" value="Processeur">
+                <label class="form-check-label" for="Processeur">Processeur</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Carte Mère" [(ngModel)]="Type" value="Carte Mère">
+                <label class="form-check-label" for="Carte Mère">Carte Mère</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="RAM" [(ngModel)]="Type" value="RAM">
+                <label class="form-check-label" for="RAM">Ram</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Refroidissement" [(ngModel)]="Type" value="Refroidissement">
+                <label class="form-check-label" for="Refroidissement">Refroidissement</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Carte Graphique" [(ngModel)]="Type" value="Carte Graphique">
+                <label class="form-check-label" for="Carte Graphique">Carte Graphique</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="SSD M.2" [(ngModel)]="Type" value="SSD M.2">
+                <label class="form-check-label" for="SSD M.2">SSD M.2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="SSD 2.5" [(ngModel)]="Type" value="SSD 2.5">
+                <label class="form-check-label" for="SSD 2.5">SSD 2.5</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="HDD" [(ngModel)]="Type" value="HDD">
+                <label class="form-check-label" for="HDD">HDD</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Boitier" [(ngModel)]="Type" value="Boitier">
+                <label class="form-check-label" for="Boitier">Boitier</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Alimentation" [(ngModel)]="Type" value="Alimentation">
+                <label class="form-check-label" for="Alimentation">Alimentation</label>
+            </div>
+        </div>
+        
+        <app-produit *ngFor="let product of (ProductList | filter:Search | filterType:Type) as Produit" [Produit]="product"></app-produit>
+        <div *ngIf="(ProductList | filter:Search | filterType:Type).length < 1">
+            Aucun produit trouvé
+        </div>
+    </div>
+</div>

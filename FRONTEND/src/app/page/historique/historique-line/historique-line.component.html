@@ -1,0 +1,17 @@
+<div class="jks-jksconfigo-composant mt-4" (click)="setShowing()">
+    <div class="jks-jksconfigo-info">
+        <h3 class="jks-jksconfigo-titleComposant ms-2"># {{ commande.Reference }}</h3>
+    </div>
+    <div *ngIf="!isShowing" class="jks-jksconfigo-add jks-color">
+        <i class="bi bi-plus-circle-fill"></i>
+    </div>
+    <div *ngIf="isShowing" class="jks-jksconfigo-add jks-color">
+        <i class="bi bi-dash-circle-fill"></i>
+    </div>
+</div>
+
+<div class="bg-light slide" [ngClass]="{'activeSlide': isShowing}">
+    <div *ngIf="isShowing">
+        <app-product-cart *ngFor="let product of commande.carts" [Produit]="product.product" [qte]="product.Qte"></app-product-cart>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+Client:
+    type: entity
+    table: client
+    id:
+        idClient:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_Client
+            generator:
+                strategy: IDENTITY
+    fields:
+        lastname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        forname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        adresse:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        civility:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        citycode:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        city:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        country:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        mail:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        phone:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        username:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

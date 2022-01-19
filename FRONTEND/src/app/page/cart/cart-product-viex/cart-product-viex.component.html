@@ -1,0 +1,23 @@
+<div class="jks-cart-header jks-title-section jks-cart-section-title">
+    <div class="jks-cart-content">
+        <div class="jks-cart-table-cell jks-cart-product-designation pb-1">
+            <img class="jks-cart-product-image" src="{{ cart.product.CheminImage }}">
+            <div class="jks-cart-product-text ms-3 jks-cart-name">
+                <div class="jks-cart-product-title jks-cart-product-color">{{ cart.product.Intitule }}</div>
+                <div class="jks-cart-product-stock"><span class="badge rounded-pill bg-success">En stock</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="jks-cart-body">
+        <div>
+            <div class="jks-cart-table-cell jks-cart-section pb-1 jks-cart-product-color jks-cart-prix-unitaire">{{ cart.product.Prix  }} €</div>
+            <div class="jks-cart-table-cell jks-cart-section pb-1 jks-cart-product-color jks-cart-block">
+                <button class="jks-cart-btn" (click)="removeItem(cart.product)"><i class="bi bi-dash"></i></button>
+                <span>{{ cart.Qte }}</span>
+                <button class="jks-cart-btn" (click)="addItem(cart.product)"><i class="bi bi-plus"></i></button>
+            </div>
+        <div class="jks-cart-table-cell jks-cart-section pb-1 jks-cart-product-color jks-cart-block">{{ (getCount()).toFixed(2) }} €</div>
+        <div class="jks-cart-table-cell jks-cart-section pb-1 jks-cart-product-color jks-cart-block"><i class="bi bi-trash jks-cart-trash" (click)="removeProduct(cart.product)"></i></div>
+        </div>
+    </div>
+</div>

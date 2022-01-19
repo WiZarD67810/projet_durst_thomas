@@ -1,0 +1,28 @@
+Commande:
+    type: entity
+    table: commande
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        idClient:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ID_Client
+        reference:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: Reference
+    lifecycleCallbacks: {  }

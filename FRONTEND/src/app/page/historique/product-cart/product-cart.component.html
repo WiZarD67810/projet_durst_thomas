@@ -1,0 +1,15 @@
+<article>
+    <div class="tp03-cart-product-header tp03-title-section tp03-cart-section-title">
+        <div class="tp03-cart-product-content">
+            <div class="tp03-cart-table-cell tp03-cart-product-designation pb-1">
+                <a routerLink="Product/{{ Produit.Reference }}">
+                    <img class="tp03-product-cart-image" src="{{ Produit.CheminImage }}">
+                    <div class="tp03-cart-product-text ms-3 tp03-cart-name">
+                        <div class="tp03-cart-product-title tp03-cart-product-color">{{ Produit.Intitule }}</div>
+                        <div class="tp03-product-cart-resume mt-3">Quantité : {{ qte }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
