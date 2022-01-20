@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: "http://localhost"
+  apiURL: "https://projet-durst-thomas.herokuapp.com"
 };

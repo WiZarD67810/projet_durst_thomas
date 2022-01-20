@@ -19,11 +19,11 @@ if($isDevMode) {
     );
 } else {
     $conn = array(
-        'host' => 'ec2-18-234-17-166.compute-1.amazonaws.com',
+        'host' => 'ec2-3-222-49-168.compute-1.amazonaws.com',
         'driver' => 'pdo_pgsql',
-        'user' => 'frfqgjardievbk',
-        'password' => '406273e3d690ff558fa9a78f8bd50964d6bae5b1bbe5311ac338bf9d763610b9',
-        'dbname' => 'df95mdmc314570',
+        'user' => 'kewitdtegnskcu',
+        'password' => '50df391327f7ef74980ca536112789a409b5535e20a6b46e673666c14d88cfaa',
+        'dbname' => 'd4j204i7p4ejnf',
         'port' => '5432'
     );
 }
